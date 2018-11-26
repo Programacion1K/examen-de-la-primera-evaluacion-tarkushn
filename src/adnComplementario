@@ -1,0 +1,22 @@
+public class AdnComplementario {
+
+
+
+    public static String devuelveComplementario( String adn) {
+        String adnComplementado="";
+
+        for (int i = 0; i < adn.length() ; i++) {
+            if(adn.charAt(i)=='A'){
+                adnComplementado+="T";
+            } else if (adn.charAt(i)=='T'){
+                adnComplementado+="A";
+            } else if (adn.charAt(i)=='G'){
+                adnComplementado+="C";
+            } else {
+             adnComplementado+="G";
+            }
+        }
+        return adnComplementado;
+    }
+
+}

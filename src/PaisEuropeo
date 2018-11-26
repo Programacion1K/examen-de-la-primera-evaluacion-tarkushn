@@ -1,0 +1,66 @@
+public class PaisEuropeo {
+    private  final String nombre;
+    private int poblacion=0;
+    private String dominio;
+    private static int fondoComun=0;
+    private int saldo;
+    private int aportar=0;
+    private char categoria;
+
+
+
+
+
+    public PaisEuropeo(String nombre, int poblacion, String dominio){
+        this.nombre=nombre;
+        this.poblacion=poblacion;
+        this.dominio=dominio;
+
+    }
+
+    public PaisEuropeo(String nombre, int poblacion){
+        this.nombre=nombre;
+        this.poblacion=poblacion;
+        this.dominio=nombre.substring(0,1);
+
+    }
+
+
+
+
+    public void aportar(int saldo) {
+        this.saldo = saldo;
+        fondoComun+=saldo;
+
+    }
+
+    public static int getFondoComun() {
+        return fondoComun;
+    }
+
+    public void retirar(int saldo) {
+        this.saldo = saldo;
+        fondoComun-=saldo;
+
+    }
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+
+    public String getCategoria() {
+        if (saldo>10000) {
+            return"A";
+        } else if (saldo>=0 || saldo<=10000){
+            return "B";
+        } else {
+            return "C";
+        }
+    }
+}

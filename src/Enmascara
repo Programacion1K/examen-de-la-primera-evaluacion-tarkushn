@@ -1,0 +1,24 @@
+public class Enmascara {
+
+
+
+
+
+    public static String enmascara(String cadenaAEnmascarar){
+
+        String cadenaAsustituir=cadenaAEnmascarar.substring(0,cadenaAEnmascarar.length()-4);
+        String cadenaBuena=cadenaAEnmascarar.substring(cadenaAEnmascarar.length()-4,cadenaAEnmascarar.length());
+
+        String CadenaRemplaza=cadenaAsustituir;
+
+
+        for (int i = 0; i < cadenaAsustituir.length() ; i++) {
+           CadenaRemplaza=CadenaRemplaza.replace(CadenaRemplaza.charAt(i),'#');
+
+        }
+
+        String cadenaFinal=CadenaRemplaza+cadenaBuena;
+            return cadenaFinal;
+    }
+
+}
